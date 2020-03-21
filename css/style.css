@@ -1,28 +1,157 @@
-/*============= RESETS =============  font-family: 'Lato', sans-serif;  */
+/*============= RESETS =============0*/
 
 /*-- iPhone X Remove Gutters --*/
+html {
+    padding: env(safe-area-inset);
+}
 
 /*-- Prevent Horizontal Scrolling & Font Style --*/
+html, body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif; 
+    color: #505962;
+}
+
+.text-nuno {
+    color: #1EBBA3;
+}
 
 /*--- Nav Scrolling Offset --*/
+.offset:before {
+    content: "";
+    height: 4rem;
+    display: block;
+    margin-top: -4rem;
+ }
 
 /*--- Extra Bootstrap Column Padding --*/
 
 
 /*============= NAVIGATION =============*/
+.navbar-brand img {
+    height: 2rem;
+}
 
+.navbar {
+    padding: .7rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+    transition: background-color .5s ease;
+}
+
+.navbar.solid {
+    background-color: rgb(0, 0, 0, .7);
+    transition: background-color 1s ease;
+}
+
+.navbar.solid-toggle {
+    background-color: rgb(0, 0, 0, .7);
+    transition: background-color 1s ease;
+}
+
+.navbar li {
+    padding-right: .8rem;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding-top: .8rem;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: #1EBBA3;
+    transition: color 1s ease;
+}
+
+.custom-toggler-icon {
+    color: white;
+    font-size: 1.6rem;
+}
 
 /*-- Remove Button Outline --*/
-
+button:focus, a:focus {
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+}
 
 /*============= LANDING PAGE =============*/
 
 /*--- Fixed Landing Page Section --*/
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
 
-/*-- Landing Page Caption --*/
+.home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home-inner {
+    background-image: url('../img/computers.jpg');
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: cover;
+    background-position: center center;
+
+    /* Phone compatibility stuff */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    display: table;
+}
+
+/* Landing Page Caption */
+.caption {
+    z-index: 1;
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    max-width: 100%;
+ }
+ .caption h1 {
+    font-size: 4.5rem;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+ }
+ .caption h3 {
+    font-size: 2.5rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 2rem;
+ }
+ .caption .btn-lg {
+    border-width: medium;
+    padding: .8rem 1.5rem;
+    font-size: 1.1rem;
+ }
+ 
 
 /*-- Bouncing Down Arrow --*/
+.arrow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    color: #FFF;
+    font-size: 2.2rem;
+    opacity: .5;
+    animation: bounce 2s infinite;
+}
 
+.arrow:hover {
+    opacity: .8;
+}
 
 /*============= FEATURES SECTION =============*/
 
